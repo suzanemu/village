@@ -1,5 +1,7 @@
 import { GoogleGenAI, Type } from "@google/genai";
 
+// The API key must be obtained exclusively from process.env.API_KEY.
+// We assume this variable is pre-configured, valid, and accessible.
 const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
 
 export const generateQuotationData = async (promptText: string): Promise<any> => {
